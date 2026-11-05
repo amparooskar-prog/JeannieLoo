@@ -48,3 +48,18 @@ if (filmControl) filmControl.onclick = () => {
   filmControl.setAttribute('aria-pressed', String(paused));
   filmControl.textContent = paused ? 'Play motion' : 'Pause motion';
 };
+
+const sampleDay = document.getElementById('sample-day');
+if (sampleDay) {
+  const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Singapore' });
+  const day = new Date(today + 'T12:00:00+08:00');
+  for (let i = 0; i < 5; i++) {
+    day.setUTCDate(day.getUTCDate() + 1);
+    const label = day.toLocaleDateString('en-SG', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'Asia/Singapore' });
+    sampleDay.add(new Option(label, label));
+  }
+  sampleDay.closest('.schedule-preview').addEventListener('change', () => {
+    const time = document.querySelector('input[name="sample-time"]:checked');
+    document.getElementById('sample-result').textContent = time ? 'Sample selection: ' + sampleDay.value + ', ' + time.value + ' (SGT).' : '';
+  });
+}
