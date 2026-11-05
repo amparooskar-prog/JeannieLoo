@@ -32,7 +32,7 @@ for (const opener of document.querySelectorAll('.enquiry')) {
     const title = application ? 'Join Jeannie’s team' : 'Request the e-book';
     const fields = [['Name','text'], ['Email','email']];
     if (application) fields.push(['Highest qualification','text'], ['Phone','tel'], ['Earliest start date','date']);
-    enquiryDialog.innerHTML = '<button class="dismiss" aria-label="Close">×</button><h2 id="enquiryTitle">'+title+'</h2><p>Review and send your request in your email app. You can also write to <a href="mailto:jeannielooyr@pruadviser.com.sg">jeannielooyr@pruadviser.com.sg</a>.</p><form>'+fields.map(([name,type])=>'<label>'+name+'<input required name="'+name+'" type="'+type+'"></label>').join('')+'<button class="button">Prepare email ↗</button></form>';
+    enquiryDialog.innerHTML = '<button class="dismiss" aria-label="Close">×</button><h2 id="enquiryTitle">'+title+'</h2><p>Review and send your request in your email app. You can also write to <a href="mailto:jeannielooyr@pruadviser.com.sg">jeannielooyr@pruadviser.com.sg</a>.</p><form>'+fields.map(([name,type])=>'<label>'+name+'<input required name="'+name+'" type="'+type+'"></label>').join('')+'<button class="button">Prepare email <i aria-hidden="true" class="ui-arrow arrow-out"></i></button></form>';
     enquiryDialog.querySelector('.dismiss').onclick = () => enquiryDialog.close();
     enquiryDialog.querySelector('form').onsubmit = event => {
       event.preventDefault();
