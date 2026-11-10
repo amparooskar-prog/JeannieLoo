@@ -16,3 +16,18 @@ body,header,footer,.open,dialog{background:#faf7f1}em,.brand span{color:#863f50}
 @media(max-width:720px){#services .services article{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:24px 0}#services .services article img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}.schedule-preview{grid-template-columns:minmax(0,1fr);gap:16px}}
 .ui-arrow{display:inline-block;width:1em;height:1em;background-color:currentColor;vertical-align:-.12em;mask:url("./arrow.svg") center/contain no-repeat;-webkit-mask:url("./arrow.svg") center/contain no-repeat}.arrow-left{transform:rotate(180deg)}.arrow-down{transform:rotate(90deg)}.arrow-out{transform:rotate(-45deg)}
 .about-contact{display:grid;gap:10px;margin:24px 0;font-style:normal;font-size:15px;line-height:1.5;min-width:0}.about-contact a{overflow-wrap:anywhere;text-decoration:underline;text-underline-offset:4px}
+
+.experience { background: #f0e6db; }
+.experience-list { max-width: 860px; margin-top: 36px; }
+.experience-role { border-top: 1px solid #c8b6ab; padding: 28px 0; }
+.experience-role h3 { margin: 8px 0; font-size: clamp(25px, 3vw, 38px); line-height: 1.2; }
+.experience-role p, .experience-role li { max-width: 72ch; line-height: 1.65; overflow-wrap: anywhere; }
+.experience-role .experience-date { font-size: 13px; letter-spacing: .04em; color: #783746; margin: 0; }
+.experience-role .experience-company { font-weight: 650; margin: 8px 0; }
+.experience-role .experience-meta { font-size: 14px; margin-top: 0; }
+.experience-role ul { padding-left: 22px; }
+@media (max-width: 720px) {
+  .experience { padding: 42px 7vw; }
+  .experience-role { padding: 22px 0; }
+  .experience-role p, .experience-role li { font-size: 16px; }
+}
